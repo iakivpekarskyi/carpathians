@@ -9,15 +9,13 @@ import Services from "@/components/Services";
 export default function Home() {
   return (
     <main className="">
-      <main className="">
-        <Header />
-        <Hero />
-        {/* <About />
+      <Header />
+      <Hero />
+      {/* <About />
         <Services />
         <Career /> */}
-        <Gallery />
-        <Contacts />
-      </main>
+      <Gallery />
+      <Contacts />
     </main>
   );
 }

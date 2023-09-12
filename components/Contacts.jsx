@@ -4,15 +4,12 @@ import BackgroundWrapper from "./BackgroundWrapper";
 const Contacts = () => {
   return (
     <BackgroundWrapper>
-      <div
-        className="inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
+      <section
+        className="inset-0 h-full w-full  bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url("/images/bckg/bckg_contacts.jpeg")`,
         }}
-      >
-        {/* Content */}
-        {/* Your content here */}
-      </div>
+      ></section>
     </BackgroundWrapper>
   );
 };

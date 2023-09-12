@@ -24,11 +24,11 @@ const Header = () => {
             height={21}
             className=" mt-9 object-contain"
           />
-          <div>
+          <div className="text-justify">
             <p
-              className={`${KarantinaFont.className} text-cap text-14 font-normal leading-normal tracking-[2.59px] text-white  `}
+              className={`${KarantinaFont.className}  text-13 justify-center tracking-[2.59px] `}
             >
-              Carp Travel
+              CarpTravel
             </p>
           </div>
         </div>
