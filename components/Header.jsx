@@ -2,52 +2,82 @@
 
 import { Link } from "react-scroll";
 import Image from "next/image";
-import logo from "../public/images/logo/sprite.svg";
+import logo from "../public/images/svg/logo.svg";
+import { Karantina } from "next/font/google";
+
+const KarantinaFont = Karantina({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "300",
+});
 
 const Header = () => {
   return (
-    <header className="absolute max-w-full h-auto">
-      <div className="flex items-center justify-between px-4">
-       <div className="items-center">
-  <Image
-    src="/public/images/logo/sprite.svg"
-    alt="Logo"
-    width={59} // Adjust the width as needed
-    height={21} // Adjust the height as needed
-  />
-  <p className="ml-2 text-xl font-semibold">Carp Tavel</p>
-</div>
-        <div className="flex space-x-4">
-          <div className="menu text-sm font-normal tracking-wider text-white">
-            <Link
-              to="hero"
-              smooth={true}
-              duration={500}
-              className="rounded px-2 py-1 text-sm font-medium text-white transition-all duration-300 hover:bg-transparent hover:font-semibold hover:text-black"
+    <header className="text-slim fixed z-10 mx-auto mt-1 flex items-center justify-between px-5 text-yellow-50 ">
+      <div className="">
+        {/* logo */}
+        <div className="">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={59}
+            height={21}
+            className=" mt-9 object-contain  "
+          />
+          <div>
+            <p
+              className={`${KarantinaFont.className} text-m text-center tracking-5 `}
             >
-              Home
-            </Link>
-            <Link
-              to="gallery"
-              smooth={true}
-              duration={500}
-              className="rounded px-2 py-1 text-sm font-medium text-white transition-all duration-300 hover:bg-transparent hover:font-semibold hover:text-black"
-            >
-              Gallery
-            </Link>
-            <Link
-              to="contacts"
-              smooth={true}
-              duration={500}
-              className="rounded px-2 py-1 text-sm font-medium text-white transition-all duration-300 hover:bg-transparent hover:font-semibold hover:text-black"
-            >
-              Contacts
-            </Link>
+              Carp Travel
+            </p>
           </div>
         </div>
+      </div>
+
+      {/* Desktop menu */}
+      <div className="">
+        <ul className="flex text-sm font-light md:gap-6 xl:gap-14   ">
+          <li>
+            <Link to="hero" className="hover:underline">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="gallery" className="hover:underline">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="gallery" className="hover:underline">
+              Career
+            </Link>
+          </li>
+          <li>
+            <Link to="gallery" className="hover:underline">
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link to="contacts" className="hover:underline">
+              Contacts
+            </Link>
+          </li>
+        </ul>
       </div>
     </header>
   );
 };
 
 export default Header;
+
+{
+  /* Mobile menu */
+}
+{
+  /* 
+        <div className="">
+          <button className="menu text-sm uppercase font-light text-white">
+            Menu
+          </button>
+        </div> */
+}
