@@ -13,20 +13,20 @@ const KarantinaFont = Karantina({
 
 const Header = () => {
   return (
-    <header className="text-slim fixed z-10 mx-auto mt-1 flex items-center justify-between px-5 text-yellow-50 ">
-      <div className="">
-        {/* logo */}
-        <div className="">
+    <section className="absolute z-10 flex w-full  justify-between px-5">
+      {/* logo */}
+      <div>
+        <div>
           <Image
             src={logo}
             alt="Logo"
             width={59}
             height={21}
-            className=" mt-9 object-contain  "
+            className=" mt-9 object-contain"
           />
           <div>
             <p
-              className={`${KarantinaFont.className} text-m text-center tracking-5 `}
+              className={`${KarantinaFont.className} text-cap text-14 font-normal leading-normal tracking-[2.59px] text-white  `}
             >
               Carp Travel
             </p>
@@ -34,24 +34,31 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Mobile menu */}
+      <div className=" mt-11 sm:hidden">
+        <button className=" text-sm font-light uppercase text-white">
+          Menu
+        </button>
+      </div>
+
       {/* Desktop menu */}
-      <div className="">
-        <ul className="flex text-sm font-light md:gap-6 xl:gap-14   ">
+      <div className=" mt-8 hidden sm:block">
+        <ul className="flex text-sm font-light sm:gap-8 md:gap-14   ">
           <li>
             <Link to="hero" className="hover:underline">
               Home
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="gallery" className="hover:underline">
               Services
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link to="gallery" className="hover:underline">
               Career
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="gallery" className="hover:underline">
               Gallery
@@ -64,20 +71,8 @@ const Header = () => {
           </li>
         </ul>
       </div>
-    </header>
+    </section>
   );
 };
 
 export default Header;
-
-{
-  /* Mobile menu */
-}
-{
-  /* 
-        <div className="">
-          <button className="menu text-sm uppercase font-light text-white">
-            Menu
-          </button>
-        </div> */
-}

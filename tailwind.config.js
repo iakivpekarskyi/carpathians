@@ -7,7 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: { carp: "#020f0880" },
+      colors: {
+        gainsboro: "#d9d9d9",
+      },
       letterSpacing: {
         1: "0em",
         2: "0.025em",
