@@ -1,17 +1,25 @@
-// "use client";
+import React from "react";
+import BackgroundWrapper from "./BackgroundWrapper";
 
-// import { useForm } from "react-hook-form";
+const Contacts = () => {
+  return (
+    <BackgroundWrapper>
+      <div
+        className="inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url("/images/bckg/bckg_contacts.jpeg")`,
+        }}
+      >
+        {/* Content */}
+        {/* Your content here */}
+      </div>
+    </BackgroundWrapper>
+  );
+};
 
-// const Contacts = () => {
-//   const { handleSubmit, errors } = useForm();
+export default Contacts;
 
-//   const onSubmit = (data) => {
-//     // Handle form submission, e.g., send data to the server
-//     console.log(data);
-//   };
-
-//   return (
-//     <section
+//  <section
 //       id="contacts"
 //       className="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center text-white"
 //       style={{ backgroundImage: "url('/bckg/bckg_2.jpg')" }}
@@ -27,7 +35,3 @@
 //         </button>
 //       </div>
 //     </section>
-//   );
-// };
-
-// export default Contacts;
